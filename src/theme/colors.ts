@@ -36,6 +36,10 @@ const componentsPalette = {
     hover: '#f3f5fe',
     active: '#e8eaf2',
   },
+  closeButton: {
+    main: 'transparent',
+    hover: '#f2d0c1',
+  },
 } as const;
 
 export { colors, componentsPalette };
