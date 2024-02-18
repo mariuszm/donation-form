@@ -23,12 +23,13 @@ import {
   TotalValue,
 } from '@/components/form/styles';
 import { MonthPicker } from '@/components/month-picker';
+import { useDonationStore } from '@/store';
 
 function App() {
   const [amount, setAmount] = useState<string | undefined>();
   const [formattedAmount, setFormattedAmount] = useState<string | undefined>();
   const [total, setTotal] = useState('0');
-  const [date, setDate] = useState(new Date());
+  const { dateUntil, getMonthName } = useDonationStore();
 
   const handleOnValueChange: CurrencyInputProps['onValueChange'] = (
     value,
@@ -79,7 +80,7 @@ function App() {
           </FormField>
           <FormField>
             <Label>Every month until</Label>
-            <MonthPicker date={date} onChange={handleOnChangeMonth} />
+            <MonthPicker today={new Date()} onChange={handleOnChangeMonth} />
           </FormField>
           <Total>
             <TotalInfo>
@@ -88,7 +89,11 @@ function App() {
             </TotalInfo>
             <InfoBox>
               You will be sending <strong>${formattedAmount || '0.00'}</strong>{' '}
-              every month, until <strong>August 2023</strong>. Thank you!
+              every month, until{' '}
+              <strong>
+                {getMonthName()} {dateUntil?.getFullYear()}
+              </strong>
+              . Thank you!
             </InfoBox>
           </Total>
           <Actions>

@@ -1,28 +1,35 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { styled } from 'styled-components';
 
 import ChevronLeft from '@/assets/chevron-left.svg';
+import { useDonationStore } from '@/store';
 
 interface IProps {
+  today: Date;
   onChange?: (numberOfMonths: number) => void;
 }
 
-export function MonthPicker({ onChange }: IProps) {
-  const d = useMemo(() => new Date(), []);
-  const [date, setDate] = useState(d);
+export function MonthPicker({ today, onChange }: IProps) {
+  const { dateUntil, setDateUntil, getMonthName } = useDonationStore();
   const [disablePrevMonth, setDisablePrevMonth] = useState(false);
 
   useEffect(() => {
-    const d = new Date();
+    if (!dateUntil) {
+      setDateUntil(today);
+      return;
+    }
     const numberOfMonths =
-      (date.getFullYear() - d.getFullYear()) * 12 +
-      (date.getMonth() - d.getMonth());
+      (dateUntil.getFullYear() - today.getFullYear()) * 12 +
+      (dateUntil.getMonth() - today.getMonth());
     setDisablePrevMonth(numberOfMonths <= 0);
     onChange?.(numberOfMonths);
-  }, [date, onChange]);
+  }, [dateUntil, setDateUntil, today, onChange]);
 
   const handleChangeMonth = (index: -1 | 1) => () => {
-    setDate(old => new Date(old.getFullYear(), old.getMonth() + index, 1));
+    if (!dateUntil) return;
+    setDateUntil(
+      new Date(dateUntil.getFullYear(), dateUntil.getMonth() + index, 1),
+    );
   };
 
   return (
@@ -32,8 +39,8 @@ export function MonthPicker({ onChange }: IProps) {
         className={disablePrevMonth ? 'disabled' : ''}
       />
       <DateWrapper>
-        <Month>{date.toLocaleString('default', { month: 'long' })}</Month>
-        <Year>{date.getFullYear()}</Year>
+        <Month>{getMonthName()}</Month>
+        <Year>{dateUntil?.getFullYear()}</Year>
       </DateWrapper>
       <ButtonNext onClick={handleChangeMonth(1)} />
     </Container>
