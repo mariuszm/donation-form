@@ -9,7 +9,8 @@
 - E2E testomg: [Playwright](https://playwright.dev/)
 - code quality checked with: [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
 
-### Prerequisities: `Node.js`, `pnpm`
+### Prerequisities:
+Before running the app, please make sure you have installed `Node.js`, `pnpm` (should also work for `npm` or `yarn`) on your machine.
 ### Installation:
 ```
 pnpm i
