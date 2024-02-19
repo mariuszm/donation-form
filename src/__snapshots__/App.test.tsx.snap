@@ -203,6 +203,7 @@ exports[`App > form is visible 1`] = `
           </div>
           <div
             class="sc-qZrbh iGUJor"
+            data-testid="total"
           >
             $
             0.00
@@ -210,6 +211,7 @@ exports[`App > form is visible 1`] = `
         </div>
         <div
           class="sc-jsEeTM hCERCq"
+          data-testid="infobox"
         >
           You will be sending 
           <strong>

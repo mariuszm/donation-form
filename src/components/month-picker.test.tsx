@@ -1,3 +1,4 @@
+import { formatSelectedDate } from '@/helpers/date';
 import { fireEvent, render, screen } from '@/test/test-utils';
 
 import { MonthPicker } from './month-picker';
@@ -6,9 +7,7 @@ describe('MonthPicker', () => {
   it('should display correct date', () => {
     const today = new Date();
     const { container } = render(<MonthPicker today={today} />);
-    expect(container.firstChild).toHaveTextContent(
-      today.toLocaleString('default', { month: 'long' }) + today.getFullYear(),
-    );
+    expect(container.firstChild).toHaveTextContent(formatSelectedDate(today));
   });
 
   it('should change months on button click', async () => {
@@ -18,13 +17,12 @@ describe('MonthPicker', () => {
 
     const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
     expect(screen.getByTestId('month-picker')).toHaveTextContent(
-      nextMonth.toLocaleString('default', { month: 'long' }) +
-        nextMonth.getFullYear(),
+      formatSelectedDate(nextMonth),
     );
 
     fireEvent.click(screen.getByTestId('prev-month'));
     expect(screen.getByTestId('month-picker')).toHaveTextContent(
-      today.toLocaleString('default', { month: 'long' }) + today.getFullYear(),
+      formatSelectedDate(today),
     );
   });
 
@@ -34,19 +32,18 @@ describe('MonthPicker', () => {
 
     fireEvent.click(screen.getByTestId('prev-month'));
     expect(screen.getByTestId('month-picker')).toHaveTextContent(
-      today.toLocaleString('default', { month: 'long' }) + today.getFullYear(),
+      formatSelectedDate(today),
     );
 
     const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
     fireEvent.click(screen.getByTestId('next-month'));
     expect(screen.getByTestId('month-picker')).toHaveTextContent(
-      nextMonth.toLocaleString('default', { month: 'long' }) +
-        nextMonth.getFullYear(),
+      formatSelectedDate(nextMonth),
     );
 
     fireEvent.click(screen.getByTestId('prev-month'));
     expect(screen.getByTestId('month-picker')).toHaveTextContent(
-      today.toLocaleString('default', { month: 'long' }) + today.getFullYear(),
+      formatSelectedDate(today),
     );
   });
 });

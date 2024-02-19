@@ -7,7 +7,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'prettier'
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['coverage', 'dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   plugins: [
     'prettier',
@@ -17,7 +17,7 @@ module.exports = {
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    // 'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
 
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',

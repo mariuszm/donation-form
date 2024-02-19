@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 
+import { getMonthName } from '@/helpers/date';
+
 interface IDonationStore {
   dateUntil: Date | null;
   setDateUntil: (date: Date) => void;
@@ -15,8 +17,6 @@ export const useDonationStore = create<IDonationStore>((set, get) => ({
     }));
   },
   getMonthName() {
-    return (
-      get().dateUntil?.toLocaleString('default', { month: 'long' }) || null
-    );
+    return getMonthName(get().dateUntil);
   },
 }));

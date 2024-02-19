@@ -86,9 +86,9 @@ function App() {
           <Total>
             <TotalInfo>
               <TotalLabel>Total amount</TotalLabel>
-              <TotalValue>${total}</TotalValue>
+              <TotalValue data-testid="total">${total}</TotalValue>
             </TotalInfo>
-            <InfoBox>
+            <InfoBox data-testid="infobox">
               You will be sending <strong>${formattedAmount || '0.00'}</strong>{' '}
               every month, until{' '}
               <strong>

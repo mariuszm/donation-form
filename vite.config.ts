@@ -12,5 +12,8 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/test/setupTests.ts',
+    coverage: {
+      exclude: ['**/*.d.ts', '.eslint*', '**/playwright*', '**/*.e2e.*'],
+    },
   },
 });
