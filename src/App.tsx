@@ -76,6 +76,7 @@ function App() {
               value={amount}
               placeholder="0.00"
               onValueChange={handleOnValueChange}
+              data-testid="input-amount"
             />
           </FormField>
           <FormField>

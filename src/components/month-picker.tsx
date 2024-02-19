@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { styled } from 'styled-components';
 
 import ChevronLeft from '@/assets/chevron-left.svg';
@@ -25,24 +25,28 @@ export function MonthPicker({ today, onChange }: IProps) {
     onChange?.(numberOfMonths);
   }, [dateUntil, setDateUntil, today, onChange]);
 
-  const handleChangeMonth = (index: -1 | 1) => () => {
-    if (!dateUntil) return;
-    setDateUntil(
-      new Date(dateUntil.getFullYear(), dateUntil.getMonth() + index, 1),
-    );
-  };
+  const handleChangeMonth = useCallback(
+    (index: -1 | 1) => () => {
+      if (!dateUntil || (index === -1 && disablePrevMonth)) return;
+      setDateUntil(
+        new Date(dateUntil.getFullYear(), dateUntil.getMonth() + index, 1),
+      );
+    },
+    [disablePrevMonth, dateUntil, setDateUntil],
+  );
 
   return (
-    <Container>
+    <Container data-testid="month-picker">
       <ButtonPrev
         onClick={handleChangeMonth(-1)}
         className={disablePrevMonth ? 'disabled' : ''}
+        data-testid="prev-month"
       />
       <DateWrapper>
         <Month>{getMonthName()}</Month>
         <Year>{dateUntil?.getFullYear()}</Year>
       </DateWrapper>
-      <ButtonNext onClick={handleChangeMonth(1)} />
+      <ButtonNext onClick={handleChangeMonth(1)} data-testid="next-month" />
     </Container>
   );
 }
