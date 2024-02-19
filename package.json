@@ -10,7 +10,7 @@
     "lint": "eslint . --ext ts,tsx,js --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier --check \"{src,tests}/**/*.{ts,tsx,js,jsx,json,md,css}\" --config .prettierrc",
     "prettier:fix": "prettier --write \"{src,tests}/**/*.{ts,tsx,js,jsx,json,md,css}\" --config .prettierrc",
-    "test": "vitest --reporter verbose",
+    "test": "vitest run --reporter verbose",
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",
     "test-ct": "playwright test -c playwright-ct.config.ts"

@@ -1,30 +1,48 @@
-# React + TypeScript + Vite
+# Shift4 Home Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Included technologies:
+- [React v18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- build environment: [Vite.js](https://vitejs.dev/)
+- state management: [Zustand](https://zustand-demo.pmnd.rs/)
+- CSS-in-JS: [styled-components](https://styled-components.com/)
+- unit testing: [Vitest](https://vitest.dev/), [Testing Library](https://testing-library.com/)
+- E2E testomg: [Playwright](https://playwright.dev/)
+- code quality checked with: [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
 
-Currently, two official plugins are available:
+### Prerequisities: `Node.js`, `pnpm`
+### Installation:
+```
+pnpm i
+```
+### Running app:
+```
+pnpm run dev
+```
+### Building:
+```
+pnpm run build
+pnpm run preview
+```
+### Unit testing:
+```
+pnpm run test
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+// browser mode
+pnpm run test:ui
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+// coverage report
+pnpm run coverage
+```
+### E2E testing:
+```
+pnpm run test-ct
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Checking code quality:
+```
+ // eslint
+ pnpm run lint
+
+ // prettier
+ pnpm run prettier
+```
