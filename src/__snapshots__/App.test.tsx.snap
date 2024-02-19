@@ -131,7 +131,7 @@ exports[`App > form is visible 1`] = `
         </p>
       </div>
       <div
-        class="sc-eDLKkx kTUCbW"
+        class="sc-eDLKkx kvdCJs"
       />
     </div>
     <form
@@ -146,7 +146,7 @@ exports[`App > form is visible 1`] = `
           I can donate
         </label>
         <input
-          class="sc-jTQCzO egtgQC"
+          class="sc-jTQCzO gXsoWg"
           data-testid="input-amount"
           inputmode="decimal"
           placeholder="0.00"
@@ -167,7 +167,7 @@ exports[`App > form is visible 1`] = `
           data-testid="month-picker"
         >
           <div
-            class="sc-brSamD sc-ktwOfi iVtpkY kGhUds disabled"
+            class="sc-brSamD sc-ktwOfi iVtpkY gypdSI disabled"
             data-testid="prev-month"
           />
           <div
@@ -185,7 +185,7 @@ exports[`App > form is visible 1`] = `
             </div>
           </div>
           <div
-            class="sc-brSamD sc-hABBmJ iVtpkY blQPhM"
+            class="sc-brSamD sc-hABBmJ iVtpkY inWapI"
             data-testid="next-month"
           />
         </div>

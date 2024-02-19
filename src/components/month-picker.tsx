@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { styled } from 'styled-components';
 
-import ChevronLeft from '@/assets/chevron-left.svg';
 import { useDonationStore } from '@/store';
 
 interface IProps {
@@ -84,11 +83,11 @@ const NavButton = styled.div`
 `;
 
 const ButtonPrev = styled(NavButton)`
-  background: url(${ChevronLeft}) 0 0 no-repeat;
+  background: url('/svg/chevron-left.svg') 0 0 no-repeat;
 `;
 
 const ButtonNext = styled(NavButton)`
-  background: url(${ChevronLeft}) 0 0 no-repeat;
+  background: url('/svg/chevron-left.svg') 0 0 no-repeat;
   transform: rotate3d(0, 0, 1, 180deg);
 `;
 

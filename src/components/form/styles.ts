@@ -1,9 +1,6 @@
 import CurrencyInput from 'react-currency-input-field';
 import { styled } from 'styled-components';
 
-import CloseIcon from '@/assets/close-icon.svg';
-import DollarIcon from '@/assets/dollar.svg';
-
 export const FormWrapper = styled.div`
   width: 100vw;
   max-width: 600px;
@@ -70,7 +67,7 @@ export const ButtonClose = styled.div`
   right: 8px;
   cursor: pointer;
   background-color: ${({ theme }) => theme.palettes.component.closeButton.main};
-  background-image: url(${CloseIcon});
+  background-image: url('/svg/close-icon.svg');
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: 10px;
@@ -91,7 +88,7 @@ export const InputAmount = styled(CurrencyInput)`
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.colors.gray};
   background-color: ${({ theme }) => theme.colors.white};
-  background-image: url(${DollarIcon});
+  background-image: url('/svg/dollar.svg');
   background-position: 8px center;
   background-repeat: no-repeat;
   color: ${({ theme }) => theme.colors.purpleGray};
