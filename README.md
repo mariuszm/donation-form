@@ -1,4 +1,4 @@
-# Shift4 Home Task
+# Donation Form
 
 ## Included technologies:
 - [React v18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
