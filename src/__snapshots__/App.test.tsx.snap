@@ -2,10 +2,10 @@
 
 exports[`App > form is visible 1`] = `
 <div
-  class="sc-dJGMql eWKMMF"
+  class="sc-ikkyvV dZkbWB"
 >
   <div
-    class="sc-ifyrAs ZVjB"
+    class="sc-gFqAYk fkBMas"
   >
     <div>
       <svg
@@ -100,10 +100,10 @@ exports[`App > form is visible 1`] = `
     </div>
   </div>
   <div
-    class="sc-beySPh ewWpC"
+    class="sc-aYaIB hkAaWx"
   >
     <div
-      class="sc-hLQSwg fHrufj"
+      class="sc-fqkwJk aJAKz"
     >
       <svg
         fill="none"
@@ -131,22 +131,22 @@ exports[`App > form is visible 1`] = `
         </p>
       </div>
       <div
-        class="sc-eDLKkx kvdCJs"
+        class="sc-dcJtft gNzugq"
       />
     </div>
     <form
-      class="sc-guDLey kaoSRN"
+      class="sc-gEvDqW eqpDKl"
     >
       <div
-        class="sc-dmyCSP ewkgpU"
+        class="sc-eqUzNf dHxUqH"
       >
         <label
-          class="sc-kFCroH gFOUIW"
+          class="sc-kpDprT iQiLqI"
         >
           I can donate
         </label>
         <input
-          class="sc-jTQCzO gXsoWg"
+          class="sc-iGgVNO hKLRPv"
           data-testid="input-amount"
           inputmode="decimal"
           placeholder="0.00"
@@ -155,54 +155,54 @@ exports[`App > form is visible 1`] = `
         />
       </div>
       <div
-        class="sc-dmyCSP ewkgpU"
+        class="sc-eqUzNf dHxUqH"
       >
         <label
-          class="sc-kFCroH gFOUIW"
+          class="sc-kpDprT iQiLqI"
         >
           Every month until
         </label>
         <div
-          class="sc-eTNRI gmKlKN"
+          class="sc-cwHqhk clDZcD"
           data-testid="month-picker"
         >
           <div
-            class="sc-brSamD sc-ktwOfi iVtpkY gypdSI disabled"
+            class="sc-jEABJj sc-cPiJYC jkBevX dgTPju disabled"
             data-testid="prev-month"
           />
           <div
-            class="sc-fmKFGs FlmDZ"
+            class="sc-eDPFhE hutOgV"
           >
             <div
-              class="sc-fHejqy jQzMHP"
+              class="sc-eldOKa dJXymu"
             >
-              February
+              June
             </div>
             <div
-              class="sc-blmEgr bKBkNc"
+              class="sc-fPXMhL ecqUlM"
             >
               2024
             </div>
           </div>
           <div
-            class="sc-brSamD sc-hABBmJ iVtpkY inWapI"
+            class="sc-jEABJj sc-dLNtp jkBevX MMDUY"
             data-testid="next-month"
           />
         </div>
       </div>
       <div
-        class="sc-gLLuof dHqmkN"
+        class="sc-gsFSjX bNqscx"
       >
         <div
-          class="sc-iBdnpw bpqThd"
+          class="sc-kAycRU bfHTbY"
         >
           <div
-            class="sc-fsYfdN jKWNBq"
+            class="sc-imWZod gAsviw"
           >
             Total amount
           </div>
           <div
-            class="sc-qZrbh iGUJor"
+            class="sc-jXbVAB ctZvdl"
             data-testid="total"
           >
             $
@@ -210,7 +210,7 @@ exports[`App > form is visible 1`] = `
           </div>
         </div>
         <div
-          class="sc-jsEeTM hCERCq"
+          class="sc-dhKdPU OYbmo"
           data-testid="infobox"
         >
           You will be sending 
@@ -222,7 +222,7 @@ exports[`App > form is visible 1`] = `
           every month, until
            
           <strong>
-            February
+            June
              
             2024
           </strong>
@@ -230,16 +230,16 @@ exports[`App > form is visible 1`] = `
         </div>
       </div>
       <div
-        class="sc-irLvIq iawzZw"
+        class="sc-dAlxHm bBvAWx"
       >
         <button
-          class="sc-csKJxZ VlXTb"
+          class="sc-jlZhRR cSqsYI"
           variant="white"
         >
           cancel
         </button>
         <button
-          class="sc-csKJxZ eJLJRR"
+          class="sc-jlZhRR gmihHK"
           variant="primary"
         >
           continue
